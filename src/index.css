@@ -1,0 +1,35 @@
+@import "../node_modules/slick-carousel/slick/slick.css";
+@import "../node_modules/slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-dots {
+  display: flex !important;
+  align-items: center ;
+  justify-content: flex-end ;
+  padding-left: 0; 
+  margin-bottom: 5rem;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  color: #999;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff8c00;
+}
+
+.testimonial-card {
+  padding: 2rem; 
+  border-radius: 0.5rem; 
+  color: #fff; 
+  position: relative;
+  overflow: hidden;
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="125.333" height="21.998" viewBox="0 0 125.333 21.998">
+  <g id="Group_11388" data-name="Group 11388" transform="translate(-2137 5018.333)">
+    <g id="_5416267_add_camera_photo_photography_icon" data-name="5416267_add_camera_photo_photography_icon" transform="translate(2137 -5018.333)">
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="3.281" cy="3.281" r="3.281" transform="translate(10.822 9.568)" fill="#fff"/>
+      <path id="Path_47152" data-name="Path 47152" d="M36.461,24.137H31.886l-.306-1.509A3.281,3.281,0,0,0,28.365,20H23.131a3.281,3.281,0,0,0-3.186,2.522l-.383,1.615H16.114a2.1,2.1,0,0,1,.27.755,2.187,2.187,0,0,1,0,4.323,2.187,2.187,0,0,1-4.319,0,2.056,2.056,0,0,1-.755-.27v9.772A3.281,3.281,0,0,0,14.591,42h21.87a3.281,3.281,0,0,0,3.281-3.281v-11.3A3.281,3.281,0,0,0,36.461,24.137ZM25.413,38.316a5.468,5.468,0,1,1,5.468-5.468,5.468,5.468,0,0,1-5.468,5.468Zm10.571-9.477H32.7a1.094,1.094,0,1,1,0-2.187h3.281a1.094,1.094,0,0,1,0,2.187Z" transform="translate(-11.31 -20)" fill="#fff"/>
+      <path id="Path_47153" data-name="Path 47153" d="M16.049,33.173H15.32v-.729a1.094,1.094,0,1,0-2.187,0v.729H12.4a1.094,1.094,0,0,0,0,2.187h.729v.729a1.094,1.094,0,1,0,2.187,0V35.36h.729a1.094,1.094,0,0,0,0-2.187Z" transform="translate(-11.31 -27.213)" fill="#fff"/>
+    </g>
+    <text id="your_logo" data-name="your logo" transform="translate(2170.334 -5001.333)" fill="#fff" font-size="16" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">YOUR LOGO</tspan></text>
+  </g>
+</svg>
