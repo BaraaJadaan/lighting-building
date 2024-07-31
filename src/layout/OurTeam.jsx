@@ -11,7 +11,7 @@ export default function OurTeam() {
   return (
     <section className='bg-[#F5F5F5] relative h-full '>
         <div className='mt-10'>
-            <h1 className='text-2xl text-center font-bold mb-4'>OUR TEAM</h1>
+            <h1 className='text-2xl text-center font-bold mb-4 pt-14'>OUR TEAM</h1>
             <h2 className='text-center text-[#C4956A] font-bold mb-20'>PEOPLE BEHIND OUR SUCCESS</h2>
         </div>
         <div className='flex justify-center '>
