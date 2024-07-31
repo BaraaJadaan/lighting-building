@@ -3,9 +3,9 @@ import logo from '../assets/logo.svg';
 
 function Footer() {
   return (
-    <footer className="bg-[#282828] text-gray-400 p-8 ">
-      <div className="w-[100%]">
-        <div className="grid grid-cols-2 md:grid-cols-4 text-sm ml-36">
+    <footer className="bg-[#282828] text-gray-400 p-8">
+      <div className="max-w-screen-xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-sm text-center lg:text-left">
           <div>
             <h4 className="text-white font-semibold mb-2">OUR ADDRESS</h4>
             <address className="not-italic">
@@ -30,13 +30,13 @@ function Footer() {
             <a href="mailto:info@atclink.org" className="hover:text-white">info@atclink.org</a>
           </div>
         </div>
-        <div className="mt-8 pt-4 flex flex-col items-center justify-center text-xs text-gray-500">
+        <div className="mt-8 pt-4 flex flex-col items-center text-xs text-gray-500">
           <div className="flex items-center justify-center w-full mb-4">
-            <div className=" border-t border-[#707070] w-96 opacity-40"></div>
+            <div className="hidden lg:block border-t border-[#707070] flex-grow opacity-40"></div>
             <div className="flex-shrink mx-4">
-              <img src={logo} alt="Your Logo" className=" mx-auto" />
+              <img src={logo} alt="Your Logo" className="w-24 lg:w-auto mx-auto" />
             </div>
-            <div className="border-t border-[#707070] w-96 opacity-40"></div>
+            <div className="hidden lg:block border-t border-[#707070] flex-grow opacity-40"></div>
           </div>
           <p>&copy; 2024 Website Demo. All Rights Reserved</p>
         </div>

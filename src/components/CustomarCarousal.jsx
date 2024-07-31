@@ -21,13 +21,13 @@ function CustomarCarousal() {
   };
 
   return (
-    <div className="relative slider-container p-8 mx-[20%]">
+    <div className="relative slider-container p-4 lg:p-8 mx-[10%] lg:mx-[20%]">
       <Slider {...settings}>
         {data.map((customer, index) => (
-          <div key={index} className="testimonial-card text-left p-8 relative mt-16">
-            <p className="text-2xl mb-10">{customer.description}</p>
+          <div key={index} className="testimonial-card text-left p-4 lg:p-8 relative mt-16">
+            <p className="text-lg lg:text-2xl mb-4 lg:mb-10">{customer.description}</p>
             <div className="flex items-center mt-4">
-              <img src={customer.img} alt={customer.name} className="rounded w-16 h-16 object-cover" />
+              <img src={customer.img} alt={customer.name} className="rounded w-12 h-12 lg:w-16 lg:h-16 object-cover" />
               <div className="ml-4">
                 <h3 className="text-lg font-semibold text-white">{customer.name}</h3>
                 <p className="text-sm text-gray-400">{customer.title}</p>

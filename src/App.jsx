@@ -1,5 +1,5 @@
 import './App.css'
-import FeaturedProjects from './components/FeaturedProjects'
+import FeaturedProjects from './layout/FeaturedProjects'
 import HamburgerNav from './components/HamburgerNav'
 import HeroSection from './layout/HeroSection'
 import ContactUs from './layout/ContactUs'

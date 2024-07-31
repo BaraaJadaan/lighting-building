@@ -7,19 +7,21 @@ import logo3 from '../assets/logo3.svg'
 
 function Customers() {
   return (
-    <div className='bg-[#282828] relative h-[85vh]'>
-        <div>
-            <CustomarCarousal/> 
+    <div className='bg-[#282828] relative min-h-screen py-10'>
+      <div className='container mx-auto px-4'>
+        <div className='relative'>
+          <CustomarCarousal /> 
+          <img src={quote} alt="quote" className='hidden lg:block absolute left-40 top-28 w-auto h-auto' />
         </div>
-        <img src={quote} alt="quote" className='absolute left-40 top-28' />
-        <h1 className='text-white opacity-50 ml-[24%]'>Trusted by</h1>
-        <div className='flex mx-[24%] mt-5'>
-            <img src={logo2} alt="logo1" className='me-8'/>
-            <img src={logo3} alt="logo1" className='mx-10'/>
-            <img src={logo1} alt="logo1" className='mx-10' />
-            <img src={logo2} alt="logo1" className='mx-10'/>
-            <img src={logo3} alt="logo1" className='mx-10'/>
+        <h1 className='text-white opacity-50 text-center mt-10 lg:mt-0'>Trusted by</h1>
+        <div className='flex flex-wrap justify-center mt-5'>
+          <img src={logo2} alt="logo1" className='m-4 w-20 lg:w-auto'/>
+          <img src={logo3} alt="logo1" className='m-4 w-20 lg:w-auto'/>
+          <img src={logo1} alt="logo1" className='m-4 w-20 lg:w-auto'/>
+          <img src={logo2} alt="logo1" className='m-4 w-20 lg:w-auto'/>
+          <img src={logo3} alt="logo1" className='m-4 w-20 lg:w-auto'/>
         </div>
+      </div>
     </div>
   )
 }
