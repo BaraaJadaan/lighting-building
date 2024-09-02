@@ -18,12 +18,10 @@ const FeaturedProjects = () => {
   }, []);
 
   const setupSlides = () => {
-    gsap.set(slidesRef.current, { autoAlpha: 0, x: '100%' });
-    gsap.set(slidesRef.current[currentSlide.current], { autoAlpha: 1, x: '0%' });
-    gsap.set(textRef.current, { autoAlpha: 0, y: 20 });
+    gsap.set(textRef.current, { autoAlpha: 0, y: 0 });
     gsap.set(textRef.current[currentSlide.current], { autoAlpha: 1, y: 0 });
-    gsap.set(slidesRef.current[getPrevSlideIndex()], { autoAlpha: 0.5, x: '-100%' });
-    gsap.set(slidesRef.current[getNextSlideIndex()], { autoAlpha: 0.5, x: '100%' });
+    gsap.set(slidesRef.current[getPrevSlideIndex()], { autoAlpha: 0.5, x: '-120%' });
+    gsap.set(slidesRef.current[getNextSlideIndex()], { autoAlpha: 0.5, x: '120%' });
   };
 
   const getNextSlideIndex = () => {
@@ -37,27 +35,28 @@ const FeaturedProjects = () => {
   const nextSlide = () => {
     const nextIndex = getNextSlideIndex();
     const prevIndex = getPrevSlideIndex();
-    gsap.timeline()
-      .to(slidesRef.current[currentSlide.current], { autoAlpha: 0.5, x: '-100%', duration: 0.75, ease: 'power2.inOut' })
-      .to(slidesRef.current[nextIndex], { autoAlpha: 1, x: '0%', duration: 0.75, ease: 'power2.inOut' }, '-=0.75')
-      .set(slidesRef.current[prevIndex], { autoAlpha: 0.5, x: '100%' })
-      .to(textRef.current[currentSlide.current], { autoAlpha: 0, y: 20, duration: 0.75, ease: 'power2.inOut' }, '-=0.75')
-      .to(textRef.current[nextIndex], { autoAlpha: 1, y: 0, duration: 0.75, ease: 'power2.inOut' }, '-=0.75');
+    gsap.to(slidesRef.current[currentSlide.current], { autoAlpha: 0.5, x: '-120%', duration: 0.75 })
+    gsap.to(slidesRef.current[nextIndex], { autoAlpha: 1, x: '0%', duration: 0.75 })
+    gsap.to(slidesRef.current[prevIndex], { autoAlpha: 0.5, x: '-150%', duration: 0.75 })
+    gsap.set(slidesRef.current[prevIndex], { autoAlpha: 0, x: '250%' })
+    gsap.to(slidesRef.current[prevIndex], { autoAlpha: 0.5, x: '120%', duration: 0.75 })
+    gsap.to(textRef.current[currentSlide.current], { autoAlpha: 0})
+    gsap.to(textRef.current[nextIndex], { autoAlpha: 1, duration: 1.2 });
     currentSlide.current = nextIndex;
-    setTimeout(() => setupSlides(), 750); // Ensure setupSlides is called after transition
+
   };
 
   const prevSlide = () => {
     const prevIndex = getPrevSlideIndex();
     const nextIndex = getNextSlideIndex();
-    gsap.timeline()
-      .to(slidesRef.current[currentSlide.current], { autoAlpha: 0.5, x: '100%', duration: 0.75, ease: 'power2.inOut' })
-      .to(slidesRef.current[prevIndex], { autoAlpha: 1, x: '0%', duration: 0.75, ease: 'power2.inOut' }, '-=0.75')
-      .set(slidesRef.current[nextIndex], { autoAlpha: 0.5, x: '-100%' })
-      .to(textRef.current[currentSlide.current], { autoAlpha: 0, y: 20, duration: 0.75, ease: 'power2.inOut' }, '-=0.75')
-      .to(textRef.current[prevIndex], { autoAlpha: 1, y: 0, duration: 0.75, ease: 'power2.inOut' }, '-=0.75');
+    gsap.to(slidesRef.current[currentSlide.current], { autoAlpha: 0.5, x: '120%', duration: 0.75 })
+    gsap.to(slidesRef.current[prevIndex], { autoAlpha: 1, x: '0%', duration: 0.75 })
+    gsap.to(slidesRef.current[nextIndex], { autoAlpha: 0.5, x: '150%', duration: 0.75 })
+    gsap.set(slidesRef.current[nextIndex], { autoAlpha: 0, x: '-250%' })
+    gsap.to(slidesRef.current[nextIndex], { autoAlpha: 0.5, x: '-120%', duration: 0.75 })
+    gsap.to(textRef.current[currentSlide.current], { autoAlpha: 0})
+    gsap.to(textRef.current[nextIndex], { autoAlpha: 1, duration: 1.2 });
     currentSlide.current = prevIndex;
-    setTimeout(() => setupSlides(), 750); // Ensure setupSlides is called after transition
   };
 
   const settings = {
@@ -75,23 +74,23 @@ const FeaturedProjects = () => {
   ];
 
   return (
-    <div className="relative w-full h-[80vh] overflow-hidden">
+    <div className="relative w-full h-[100vh] overflow-hidden">
       <div className="text-center my-10">
         <h1 className="text-4xl font-bold text-black mb-2">PRO<span className="text-[#C4956A]">JECTS</span></h1>
-        <p className="text-gray-600 mb-6">Below you can take a look at our featured and recent projects that have been numerously awarded for our unique light products.</p>
-        <div className="w-20 h-1 bg-[#C4956A] mx-auto mb-6"></div>
+        <p className="opacity-50 mb-6">Below you can take a look at our featured and recent projects that have been numerously awarded for our unique light products.</p>
+        <div className="w-96 h-1 bg-[#C4956A] mx-auto mb-6"></div>
       </div>
-      <div className="hidden lg:flex relative h-[60%] justify-center items-center">
+      <div className=" relative hidden lg:flex h-[60%] justify-center items-center">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="absolute w-1/3 h-full opacity-0"
+            className="absolute w-[50%] h-full"
             ref={el => slidesRef.current[index] = el}
           >
             <div className="w-full h-full flex items-center justify-center">
-              <img src={project.img} alt={`Slide ${index + 1}`} className="w-full mx-2 object-contain" />
+              <img src={project.img} alt={`Slide ${index + 1}`} className="w-full mx-2 object-contain shadow-2xl shadow-gray-500" />
             </div>
-            <div className="absolute bg-[#282828] text-white text-sm px-5 py-7 top-[55%] right-[20%] opacity-0" ref={el => textRef.current[index] = el}>
+            <div className="absolute bg-[#282828] text-white text-sm p-8 mx-10 top-32 right-96" ref={el => textRef.current[index] = el}>
               <div className="text-sm mb-2 flex items-center space-x-2">
                 <span>{project.date}</span>
                 <span className="mx-2">|</span>
