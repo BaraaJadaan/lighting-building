@@ -23,8 +23,8 @@ function HamburgerNav() {
           </div>
         </div>
       </button>
-      <div className={`fixed top-0 left-[30%] z-10 w-auto bg-white shadow-md transition-all duration-500 ease-in-out transform ${isShow ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
-        <nav className="flex justify-center items-center p-7 ">
+      <div className={`fixed top-0 left-[30%] z-20 w-auto bg-white shadow-md transition-all duration-500 ease-in-out transform ${isShow ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
+        <nav className="flex justify-center items-center p-7">
           <a href="#home" className="text-xs text-[#C99F77] transition-all mx-4">HOME</a>
           <a href="#about" className="text-black text-xs hover:text-[#C99F77] transition-all mx-4">ABOUT</a>
           <a href="#team" className="text-black text-xs hover:text-[#C99F77] transition-all mx-4">TEAM</a>
